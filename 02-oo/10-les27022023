@@ -1,0 +1,29 @@
+class Point:
+    def __init__(self,x,y):
+        # assert x >= 0, "error: x mag niet negatief zijn!"
+        self.x = x # de 2 underscores maken de variabele prive, als je nu p.x dit later kan je deze niet meer aanpassen
+        self.y = y
+
+    @property    # p.x verwijst naar deze functie, @property zorgt ervoor dat de self.__x eerst door de x.setter gaat voordat hij returnt
+    def x(self):
+        return self.__x
+    
+    @property
+    def y(self):
+        return self.__y
+    
+    @x.setter
+    def x(self, value):
+        if value < 0:
+            raise ValueError("X mag niet negatief zijn")
+        self.__x = value
+
+
+
+
+
+
+
+p = Point(-10,5)
+# p.x= -10
+print(p.x) # dit geeft wel een -10ondaks dat we een conditie hebben in de init. De x is dus public, iedereen kan de waarde zomaar aanpassen

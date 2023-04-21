@@ -1,0 +1,21 @@
+class Distance:
+    def __init__(self, waarde_meter):
+        self.meter = waarde_meter
+    
+    @staticmethod
+    def meter(value):
+        return value
+    
+    @staticmethod
+    def milimeter(value):
+        return value * 1000
+    
+    @staticmethod
+    def miles(value):
+        return value / 1600
+    
+# d = Distance(800)
+print(Distance.milimeter(800))
+
+# d2 = Distance(700)
+# print(d2.milimeter)

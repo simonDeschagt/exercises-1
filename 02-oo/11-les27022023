@@ -1,0 +1,16 @@
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __add__(self, other):
+        return Point(
+            self.x + other.x,
+            self.y + other.y
+        )
+p1 = Point(10,5)
+p2 = Point(4,5)
+# p3 = p1.add(p2) als je de add methode aanpast dan kan je in de plaats van add gwn een plus schrijven
+p3 = p1 + p2
+print(p3.x)
+print(p3.y)

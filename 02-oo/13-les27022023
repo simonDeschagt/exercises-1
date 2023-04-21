@@ -1,0 +1,46 @@
+class Animal:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+
+    def print_informatie(self):
+        return f'{self.name}, {self.age}'
+
+
+
+
+class Dog(Animal): # Dog zal de funcities van de animal over nemen
+    pass
+    # Ik mag nu alle functies wegdoen en Dog zal animal inheritenten
+    # def __init__(self, name, age):
+    #     self.name = name
+    #     self.age = age
+    
+
+    # def print_informatie(self):
+    #     return f'{self.name}, {self.age}'
+    
+class Cat:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+
+    def print_informatie(self):
+        return f'{self.name}, {self.age}'
+    
+
+class Bird:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+
+    def print_informatie(self):
+        return f'{self.name}, {self.age}' 
+    
+# repititie is niet goed, dus we proberen op te lossen met inheritence
+
+d = Dog("Lassy", 15)
+print(d.print_informatie())
